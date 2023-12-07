@@ -17,9 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 
 const fileuploadRouter = require('./routes/fileupload');
 const getImagesRouter = require('./routes/images');
+const deleteImagesRouter = require('./routes/delete')
 
 app.use('/fileupload', fileuploadRouter);
 app.use('/images', getImagesRouter);
+app.use('/delete', deleteImagesRouter);
 
 app.use('/uploads', express.static('uploads'));
 
